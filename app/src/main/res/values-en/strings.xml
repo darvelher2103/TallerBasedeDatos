@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Workshop Basede Data</string>
+    <string name="aptmayortamaño">Apartment report on which is the most expensive apartment in the building</string>
+    <string name="balcon" translatable="false">Balcony</string>
+    <string name="balconsombra">Balcony</string>
+    <string name="guardar" translatable="false">Report How many apartments are in the shade and have balcony</string>
+    <string name="listado" translatable="false">To list</string>
+    <string name="mts" translatable="false">Mts2</string>
+    <string name="no" translatable="false">No</string>
+    <string name="nomec" translatable="false">Nomenclature</string>
+    <string name="nomenmts" translatable="false">Report nomenclature and square meters of the Department with larger size in the whole building</string>
+    <string name="piso1" translatable="false">Floor one</string>
+    <string name="piso2" translatable="false">Floor two</string>
+    <string name="piso3" translatable="false">Floor three</string>
+    <string name="piso4" translatable="false">Fourth floor</string>
+    <string name="piso5" translatable="false">Floor five</string>
+    <string name="precio" translatable="false">Price</string>
+    <string name="promedio" translatable="false">Average department size report by floor</string>
+    <string name="registraro">Average department size report by floor</string>
+    <string name="registro" translatable="false">APARTMENT REGISTRATION</string>
+    <string name="reportes" translatable="false">Reports</string>
+    <string name="si">Yes</string>
+    <string name="sombra" translatable="false">Shadow</string>
+    <string name="piso" translatable="false">Floor</string>
+</resources>

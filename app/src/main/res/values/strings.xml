@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">TallerBasedeDatos</string>
+    <string name="registro">REGISTRO APARTAMENTO</string>
+    <string name="piso">Piso</string>
+    <string name="piso1">Piso uno</string>
+    <string name="piso2">Piso dos</string>
+    <string name="piso3">Piso tres</string>
+    <string name="piso4">Piso cuatro</string>
+    <string name="piso5">Piso cinco</string>
+    <string name="registraro">Registrar</string>
+    <string name="listado">Listar</string>
+    <string name="reportes">Reportes</string>
+    <string name="precio">Precio</string>
+    <string name="balcon">Balcon</string>
+    <string name="si">Si</string>
+    <string name="no">No</string>
+    <string name="sombra">Sombra</string>
+    <string name="mts">Mts2</string>
+    <string name="nomec"># Nomeclatura</string>
+    <string name="balconsombra">Reporte Cuantos departamentos se encuentran en la sombra y tienen balcon</string>
+    <string name="aptmayortamaño">Reporte Piso en el cual se encuentra el apartamento mas caro del edificio</string>
+    <string name="nomenmts">Reporte nomenclatura y metros cuadrados del Departamento con mayor tamaño en todo el edificio</string>
+    <string name="promedio">Reporte Promedio de tamaño de los Departamentos por piso</string>
+    <string name="guardar">Guardar</string>
+    <string-array name="pisos">
+        <item>@string/piso1</item>
+        <item>@string/piso2</item>
+        <item>@string/piso3</item>
+        <item>@string/piso4</item>
+        <item>@string/piso5</item>
+    </string-array>
+    <string-array name="opciones">
+        <item>@string/registraro</item>
+        <item>@string/listado</item>
+        <item>@string/reportes</item>
+    </string-array>
+    <string-array name="opcionesReport">
+        <item>@string/balconsombra</item>
+        <item>@string/aptmayortamaño</item>
+        <item>@string/nomenmts</item>
+        <item>@string/promedio</item>
+    </string-array>
+</resources>
