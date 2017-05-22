@@ -9,8 +9,9 @@
     <LinearLayout
         android:layout_width="368dp"
         android:layout_height="495dp"
+        android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="12dp"
+        android:padding="15dp"
         android:weightSum="1"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
@@ -57,7 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.03"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:numeric="integer" />
 
         <TextView
             android:id="@+id/txtnomet"
@@ -76,7 +78,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.03"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:numeric="integer" />
 
         <TextView
             android:id="@+id/txtMtst2"
@@ -95,7 +98,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="0.03"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:numeric="integer" />
 
         <TextView
             android:id="@+id/txtbalcont"
@@ -174,12 +178,20 @@
             </RadioGroup>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnGuardar"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="0.03"
-            android:onClick="guardar"
-            android:text="@string/guardar" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="guardar"
+                android:text="@string/guardar" />
+        </LinearLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

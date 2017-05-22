@@ -16,12 +16,19 @@
     <string name="no">No</string>
     <string name="sombra">Sombra</string>
     <string name="mts">Mts2</string>
-    <string name="nomec"># Nomeclatura</string>
+    <string name="nomec">Nomeclatura</string>
     <string name="balconsombra">Reporte Cuantos departamentos se encuentran en la sombra y tienen balcon</string>
     <string name="aptmayortamaño">Reporte Piso en el cual se encuentra el apartamento mas caro del edificio</string>
     <string name="nomenmts">Reporte nomenclatura y metros cuadrados del Departamento con mayor tamaño en todo el edificio</string>
     <string name="promedio">Reporte Promedio de tamaño de los Departamentos por piso</string>
     <string name="guardar">Guardar</string>
+    <string name="balconsombratotal">Con Balcon y Sombra hay en Total:</string>
+    <string name="digiteprecio">Digite el Precio.</string>
+    <string name="digitemedida">Digite la medida en mts2.</string>
+    <string name="digitenomenc">Digite la nomeclatura.</string>
+    <string name="nomecexistente">La nomenclatura ya existe</string>
+    <string name="saveexitoso">Apartamento Registrado Exitosamente</string>
+    <string name="topepiso">No se puede agregar mas de tres apartamentos por piso.</string>
     <string-array name="pisos">
         <item>@string/piso1</item>
         <item>@string/piso2</item>

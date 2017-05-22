@@ -137,36 +137,4 @@ public class Datos {
         return apartamentos;
     }
 
-    public static ArrayList<Apartamento> promedioTamanio(Context contexto) {
-        ArrayList<Apartamento> apartamentos = new ArrayList<>();
-        SQLiteDatabase db;
-        String sql, piso, precio, balcon, sombra, mts, nome;
-
-
-        ApartamentosSQLiteOpenHelper aux = new ApartamentosSQLiteOpenHelper(contexto, "DBApartamentos", null, 1);
-        db = aux.getReadableDatabase();
-        //cursor
-
-        sql = "SELECT AVG(mts) FROM Apartamentos GROUP BY piso";
-        Cursor c = db.rawQuery(sql, null);
-
-
-        //recorremos el cursor
-        if (c.moveToFirst()) {
-            do {
-                piso = c.getString(0);
-                precio = c.getString(1);
-                balcon = c.getString(2);
-                sombra = c.getString(3);
-                mts = c.getString(4);
-                nome = c.getString(5);
-                apartamento = new Apartamento(piso, precio, balcon, sombra, mts, nome);
-                apartamentos.add(apartamento);
-            } while (c.moveToNext());
-        }
-        db.close();
-
-        return apartamentos;
-    }
-
 }

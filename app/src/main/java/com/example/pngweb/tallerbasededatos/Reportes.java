@@ -39,7 +39,7 @@ public class Reportes extends AppCompatActivity {
                         mayorTamaño();
                         break;
                     case 3:
-                        promedio();
+                        promedioDep();
                         break;
                 }
             }
@@ -58,7 +58,7 @@ public class Reportes extends AppCompatActivity {
                 cont+=1;
             }
         }
-        mensaje = "Con Balcon y Sombra hay en Total: "+cont;
+        mensaje = getResources().getString(R.string.balconsombratotal)+": "+cont;
         new AlertDialog.Builder(this).
                 setMessage(mensaje).
                 setCancelable(true).show();
@@ -83,27 +83,72 @@ public class Reportes extends AppCompatActivity {
             aptNomenc = apt.get(i).getNome();
             mtsApt = apt.get(i).getMts();
         }
-        mensaje = "Nomenclatura: "+aptNomenc+" "+" Medidas: "+" "+mtsApt;
+        mensaje = getResources().getString(R.string.nomec)+":"+aptNomenc+"\n"+getResources().getString(R.string.mts)+":"+" "+mtsApt;
         new AlertDialog.Builder(this).
                 setMessage(mensaje).
                 setCancelable(true).show();
     }
 
-
-
     public void promedio(){
         String mensaje = "";
-        int acum=0, suma =0, prom;
-
+        String pisoUno;
+        int contUno = 0, sumUno = 0, promUno, cont2 = 0, suma2 = 0, prom2 , cont3 = 0, suma3 = 0, prom3;
         ArrayList<Apartamento> apt = Datos.listarApartamentos(getApplicationContext());
 
-        for (int i=0; i<apt.size(); i++){
-            //piso = Integer.parseInt(apt.get(i).getPiso());
-            suma = suma+Integer.parseInt(apt.get(i).getMts());
-
+        for (int i = 0; i < apt.size(); i++) {
+            pisoUno = apt.get(i).getPiso();
+            if (pisoUno.equalsIgnoreCase("Piso uno")) {
+                sumUno = sumUno + Integer.parseInt(apt.get(i).getMts());
+                contUno=contUno+1;
+            }
         }
-        prom = suma/apt.size();
-        mensaje = "Promedio: " +prom;
+
+        promUno = sumUno / contUno;
+        mensaje = "Promedio del tamaño del piso uno: " + promUno;
+        new AlertDialog.Builder(this).
+                setMessage(mensaje).
+                setCancelable(true).show();
+
+    }
+
+    public void promedioDep(){
+        String piso, mensaje = "";
+        float cont=0, prom=0, suma =0, cont2=0, prom2=0, suma2 =0, cont3=0, prom3=0, suma3 =0,
+        cont4=0, prom4=0, suma4 =0, cont5=0, prom5=0, suma5 =0;
+        ArrayList<Apartamento> apt = Datos.listarConBalconySombra(getApplicationContext());
+        for (int i=0; i<apt.size(); i++){
+            piso = apt.get(i).getPiso();
+            if (piso.equalsIgnoreCase(getResources().getString(R.string.piso1))){
+                suma+=Integer.parseInt(apt.get(i).getMts());
+                cont+=1;
+            }
+            if (piso.equalsIgnoreCase(getResources().getString(R.string.piso2))){
+                suma2+=Integer.parseInt(apt.get(i).getMts());
+                cont2+=1;
+            }
+            if (piso.equalsIgnoreCase(getResources().getString(R.string.piso3))){
+                suma3+=Integer.parseInt(apt.get(i).getMts());
+                cont3+=1;
+            }
+            if (piso.equalsIgnoreCase(getResources().getString(R.string.piso4))){
+                suma4 +=Integer.parseInt(apt.get(i).getMts());
+                cont4+=1;
+            }
+            if (piso.equalsIgnoreCase(getResources().getString(R.string.piso5))){
+                suma5+=Integer.parseInt(apt.get(i).getMts());
+                cont5+=1;
+            }
+        }
+        if(cont>0)prom = suma/cont;
+        if(cont2>0)prom2 = suma2/cont2;
+        if(cont3>0)prom3 = suma3/cont3;
+        if(cont4>0)prom4 = suma4/cont4;
+        if(cont5>0)prom5 = suma5/cont5;
+        mensaje = getResources().getString(R.string.piso1)+" "+prom+"\n"+
+                 getResources().getString(R.string.piso2)+" "+prom2+"\n"+
+                 getResources().getString(R.string.piso3)+" "+prom3+"\n"+
+                 getResources().getString(R.string.piso4)+" "+prom4+"\n"+
+                 getResources().getString(R.string.piso5)+" "+prom5;
         new AlertDialog.Builder(this).
                 setMessage(mensaje).
                 setCancelable(true).show();

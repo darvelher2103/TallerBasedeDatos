@@ -76,5 +76,6 @@
             </TableRow>
 
         </TableLayout>
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

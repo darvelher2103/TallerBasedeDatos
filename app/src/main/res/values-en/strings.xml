@@ -23,4 +23,10 @@
     <string name="si">Yes</string>
     <string name="sombra" translatable="false">Shadow</string>
     <string name="piso" translatable="false">Floor</string>
+    <string name="nomecexistente">" Nomenclature already exists"</string>
+    <string name="digiteprecio">Enter the Price.</string>
+    <string name="digitenomenc">Enter the filename.</string>
+    <string name="digitemedida">Enter the measure in mts2.</string>
+    <string name="balconsombratotal">With Balcony and Shade there are in Total:</string>
+    <string name="saveexitoso">Successfully Registered Apartment</string>
 </resources>
