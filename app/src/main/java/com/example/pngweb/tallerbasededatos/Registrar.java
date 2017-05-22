@@ -28,6 +28,7 @@ public class Registrar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar);
+
         pisoOpciones = (Spinner)findViewById(R.id.cboPisos);
         opc = getResources().getStringArray(R.array.pisos);
         adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,opc);
@@ -70,11 +71,9 @@ public class Registrar extends AppCompatActivity {
     public boolean validarPisosNum(){
         ArrayList<Apartamento> apto=Datos.listarApartamentos(getApplicationContext());
         String piso=pisoOpciones.getSelectedItem().toString();
-        String  nomen="";
         int cont=0;
         for (int i=0;i<apto.size();i++){
             if (apto.get(i).getPiso().equals(piso))cont=cont+1;
-            nomen = apto.get(i).getNome();
         }
         if (cont>=3){
             Toast.makeText(getApplicationContext(),getResources().getString(R.string.topepiso),

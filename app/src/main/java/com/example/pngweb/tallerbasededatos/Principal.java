@@ -17,6 +17,7 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
         opciones=(ListView)findViewById(R.id.lstOpciones);
         opc = getResources().getStringArray(R.array.opciones);
         adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,opc);
